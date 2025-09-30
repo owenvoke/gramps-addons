@@ -1,0 +1,14 @@
+[project]
+name = "gramps-addons"
+version = "0.0.0"
+requires-python = ">=3.11"
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "gramps>=6.0.5",
+    "pygobject>=3.54.3",
+]
+
+[tool.black]
+target-version = ["py313"]

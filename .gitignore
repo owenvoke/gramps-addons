@@ -1,0 +1,6 @@
+# Python Packaging
+/.venv
+/uv.lock
+
+# Addon Exclusions
+/GBPN/*.csv

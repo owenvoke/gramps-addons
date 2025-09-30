@@ -1,0 +1,24 @@
+name: Static Analysis
+
+on: ['push', 'pull_request']
+
+jobs:
+
+  style:
+    runs-on: ubuntu-latest
+    name: Black
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: python3 -m pip install black
+
+      - name: Style Check
+        run: black --color --check .
